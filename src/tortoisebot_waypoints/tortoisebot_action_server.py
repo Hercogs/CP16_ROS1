@@ -46,6 +46,7 @@ class WaypointActionClass(object):
         self._sub_odom = rospy.Subscriber('/odom', Odometry, self._clbk_odom)
         rospy.loginfo("Action server started")
 
+
     def _clbk_odom(self, msg):
         # position
         self._position = msg.pose.pose.position
