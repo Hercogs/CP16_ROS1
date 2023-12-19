@@ -1,7 +1,5 @@
 #! /usr/bin/env python3
 
-#!/usr/bin/env python3
-
 import rospy
 import actionlib
 import math, time
@@ -46,7 +44,7 @@ class WaypointActionClient(unittest.TestCase):
         # Wait for gazebo to start
         rospy.wait_for_service('/gazebo/reset_world')
 
-        time.sleep(5)
+        time.sleep(3)
         
         while(not self.cli.wait_for_server(timeout=rospy.Duration(1.0))):
             print("Waiting for service...")
